@@ -71,6 +71,11 @@ docker run -it -v /local/scratch:/local/scratch --network host --rm process_test
 
 Replace `SAMPLEFILE.fits.fz` with the filename of the FITS image to be calibrated.
 
+## Notes
+
+- Certain portions of the code that involve interaction with Condor's Linux and Cloud databases have been redacted from this sample for security purposes.
+- The script and design of these software packages are the property of the Condor Array Telescope Project. They are being shared temporarily with select members of STScI's SCSB for interview and personal evaluation of Evan Mancini for the position of Senior Scientific Software Engineer. 
+
 ## Contributors
 
 - Evan Mancini
@@ -79,4 +84,4 @@ Replace `SAMPLEFILE.fits.fz` with the filename of the FITS image to be calibrate
 
 ## License
 
-[Specify license here]
+GNU GPLv3
