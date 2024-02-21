@@ -23,7 +23,7 @@ The `get_image_ij` function detects image sources and their pixel coordinates us
 
 - **Depth-Match Algorithm**: Sexctractor parameters are relaxed to increase the number of sources dectected across the entire image. Each source is matched with a Gaia target from the original. The primary matching method is referred to as the `depth-match` algorithm, which ranks both source and target list by flux_adu. Working down from the brightest to the faintest source, the algorithm removes source and target pairs as they are matched one-by-one via a KD tree method. The key is that the remaining target list is sliced, and a new kd tree is generated.
 - **Matching Logic**: Source and target lists are ranked by flux, and matches are made one-by-one via a KD tree method, with successive rounds of clipping and fitting to weed out incorrectly matched points.
-- - **Failsafe**: In the rare cases where there are more image sources than gaia targets available, depth_match fails. The code will then revert back to a standard kd tree method that generates a kd tree from the entire target list, and matches each source to its nearest neighbor as a group. This will work regardless of either list size, but it allows for the possibility of multiple source points being matched
+- **Failsafe**: In rare cases where there are more image sources than gaia targets available, depth_match fails. The code will then revert back to a standard kd tree method that generates a kd tree from the entire target list, and matches each source to its nearest neighbor as a group. This will work regardless of either list size, but it allows for the possibility of multiple source points being matched
 to the same target, which is obviously incorrect. 
 
 ### Step 5: RMS Clipping and Error Model Fitting
