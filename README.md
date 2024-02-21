@@ -1,4 +1,4 @@
-# Astrometric Calibration Algorithm
+# Astrometric Calibration Algorithm and Packages
 
 This repository contains Python scripts implementing an intricate astrometric calibration algorithm that matches sources detected from an image to their coordinates pulled from the Gaia telescope database. The main script, `astrometry.py`, orchestrates the calibration process, while the supporting functions are defined in `wcsfit.py`.
 
