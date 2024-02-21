@@ -63,7 +63,7 @@ This file contains additional functions used for WCS fitting, including:
 
 ## Usage
 
-The calibration routine can be initiated as part of the main image processing pipeline or via Docker. Below is the Docker command for invoking the calibration process:
+The calibration routine can be initiated as part of the main image processing pipeline or via Docker. Below a sample Docker command used to direclty invoke the calibration process:
 
 ```
 docker run -it -v /local/scratch:/local/scratch --network host --rm process_test '{"task": "astrometer", "filename": "SAMPLEFILE.fits.fz" }'
